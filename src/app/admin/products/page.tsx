@@ -86,13 +86,14 @@ async function ProductsTable() {
                   <MoreVertical />
                   <span className="sr-only">Actions</span>
                 </DropdownMenuTrigger>
-              </DropdownMenu>
+             
               <DropdownMenuContent>
                 <DropdownMenuItem asChild>
                   <a download href={`/admin/products/${product.id}/download`}>
                     Download
                   </a>
                 </DropdownMenuItem>
+                <DropdownMenuSeparator/>
                 <DropdownMenuItem asChild>
                   <Link download href={`/admin/products/${product.id}/edit`}>
                     Edit
@@ -103,6 +104,7 @@ async function ProductsTable() {
                 <DropdownMenuSeparator/>
                 <DeleteDropdownItem id={product.id} disabled={product._count.orders>0}/>
               </DropdownMenuContent>
+              </DropdownMenu>
             </TableCell>
           </TableRow>
         ))}
