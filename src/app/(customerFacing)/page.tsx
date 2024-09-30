@@ -5,6 +5,7 @@ import { cache } from "@/lib/cache";
 import { Product } from "@prisma/client";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 import { Suspense } from "react";
 
 const getMostPopularProducts=cache(() =>{
